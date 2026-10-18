@@ -1,0 +1,528 @@
+[
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    3,
+    5,
+    3,
+    9,
+    1
+   ]
+  ],
+  "expected": "Mean 4.2, median 3, mode 3 (2 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    2,
+    3,
+    4
+   ]
+  ],
+  "expected": "Mean 2.5, median 2.5, no mode, since no value repeats."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    5
+   ]
+  ],
+  "expected": "Mean 5, median 5, no mode, since no value repeats."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    2,
+    2,
+    5,
+    5,
+    9
+   ]
+  ],
+  "expected": "Mean 4.6, median 5, modes 2 and 5 (2 times each)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ]
+  ],
+  "expected": "Mean 2, median 2, modes 1, 2 and 3 (2 times each)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    4,
+    4,
+    4
+   ]
+  ],
+  "expected": "Mean 4, median 4, mode 4 (3 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ]
+  ],
+  "expected": "Mean 2, median 2, no mode, since no value repeats."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    0.5,
+    0.5,
+    1
+   ]
+  ],
+  "expected": "Mean 0.67, median 0.5, mode 0.5 (2 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    2
+   ]
+  ],
+  "expected": "Mean 1.5, median 1.5, no mode, since no value repeats."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    0.01,
+    0.02
+   ]
+  ],
+  "expected": "Mean 0.02, median 0.02, no mode, since no value repeats."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    10,
+    20,
+    20,
+    30,
+    30,
+    30
+   ]
+  ],
+  "expected": "Mean 23.33, median 25, mode 30 (3 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1000000,
+    0,
+    1000000
+   ]
+  ],
+  "expected": "Mean 666666.67, median 1000000, mode 1000000 (2 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   []
+  ],
+  "expected": "ERR:need 1 to 30 numbers"
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  ],
+  "expected": "ERR:need 1 to 30 numbers"
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  ],
+  "expected": "Mean 1, median 1, mode 1 (30 times)."
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    -1
+   ]
+  ],
+  "expected": "ERR:each number must be between 0 and 1000000"
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    1000001
+   ]
+  ],
+  "expected": "ERR:each number must be between 0 and 1000000"
+ },
+ {
+  "fn": "centerTruth",
+  "args": [
+   [
+    1,
+    2.345,
+    2.345
+   ]
+  ],
+  "expected": "Mean 1.9, median 2.35, mode 2.35 (2 times)."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    3,
+    5,
+    3,
+    9,
+    1
+   ]
+  ],
+  "expected": "Range 8 (from 1 to 9). On average the numbers sit 2.24 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    5
+   ]
+  ],
+  "expected": "Range 0 (from 5 to 5). On average the numbers sit 0 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    4,
+    4,
+    4
+   ]
+  ],
+  "expected": "Range 0 (from 4 to 4). On average the numbers sit 0 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    1,
+    2
+   ]
+  ],
+  "expected": "Range 1 (from 1 to 2). On average the numbers sit 0.5 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    0,
+    10
+   ]
+  ],
+  "expected": "Range 10 (from 0 to 10). On average the numbers sit 5 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    1,
+    10
+   ]
+  ],
+  "expected": "Range 9 (from 1 to 10). On average the numbers sit 4.5 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    0.01,
+    0.02,
+    0.04
+   ]
+  ],
+  "expected": "Range 0.03 (from 0.01 to 0.04). On average the numbers sit 0.01 from the mean."
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   []
+  ],
+  "expected": "ERR:need 1 to 30 numbers"
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    2,
+    -3
+   ]
+  ],
+  "expected": "ERR:each number must be between 0 and 1000000"
+ },
+ {
+  "fn": "spreadTruth",
+  "args": [
+   [
+    1000000,
+    0,
+    0,
+    0
+   ]
+  ],
+  "expected": "Range 1000000 (from 0 to 1000000). On average the numbers sit 375000 from the mean."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    3,
+    5,
+    3,
+    9,
+    1
+   ],
+   100
+  ],
+  "expected": "Adding 100 moves the mean from 4.2 to 20.17 and moves the median from 3 to 4."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    3,
+    5,
+    3,
+    9,
+    1
+   ],
+   4.2
+  ],
+  "expected": "Adding 4.2 leaves the mean at 4.2 and moves the median from 3 to 3.6."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ],
+   2
+  ],
+  "expected": "Adding 2 leaves the mean at 2 and leaves the median at 2."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3,
+    4
+   ],
+   2.5
+  ],
+  "expected": "Adding 2.5 leaves the mean at 2.5 and leaves the median at 2.5."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    10
+   ],
+   20
+  ],
+  "expected": "Adding 20 moves the mean from 10 to 15 and moves the median from 10 to 15."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ],
+   0
+  ],
+  "expected": "Adding 0 moves the mean from 2 to 1.5 and moves the median from 2 to 1.5."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ],
+   1000000
+  ],
+  "expected": "Adding 1000000 moves the mean from 2 to 250001.5 and moves the median from 2 to 2.5."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ],
+   -1
+  ],
+  "expected": "ERR:extra number must be between 0 and 1000000"
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    2,
+    3
+   ],
+   1000001
+  ],
+  "expected": "ERR:extra number must be between 0 and 1000000"
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [],
+   5
+  ],
+  "expected": "ERR:need 1 to 30 numbers"
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   5
+  ],
+  "expected": "Adding 5 moves the mean from 1 to 1.13 and leaves the median at 1."
+ },
+ {
+  "fn": "extraTruth",
+  "args": [
+   [
+    5,
+    6
+   ],
+   5.5
+  ],
+  "expected": "Adding 5.5 leaves the mean at 5.5 and leaves the median at 5.5."
+ }
+]
