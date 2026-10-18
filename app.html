@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Median Math - app</title>
+<style>
+  :root { --accent:#4b4aa0; --ink:#14142b; --paper:#f3f3fa; --soft:#e2e2f4; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2rem 1.2rem; }
+  h1 { font-size:1.8rem; color:var(--accent); }
+  .boundary { margin:1rem 0 1.4rem; }
+  .panel { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1rem 1.1rem; margin-bottom:1.1rem; }
+  h2 { font-size:1.1rem; margin-bottom:.6rem; }
+  p.note { font-size:.9rem; margin-bottom:.4rem; }
+  label { display:block; font-size:.9rem; margin:.45rem 0 .1rem; }
+  input, select { width:100%; padding:.45rem .55rem; font-size:1rem; border:1px solid #bcbce0; border-radius:6px; background:#fff; color:var(--ink); }
+  .row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.6rem; }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+  .out { margin-top:.7rem; font-size:.98rem; background:#fff; border:1px dashed #bcbce0; border-radius:6px; padding:.6rem .7rem; min-height:2.4rem; }
+  .out.err { border-color:#b03030; color:#8a1f1f; }
+  footer { margin-top:1.8rem; font-size:.85rem; color:#5f5f8c; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Median Math</h1>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    This page works out mean, median, mode, range and average distance from the mean for the numbers you type. It does not say which summary suits your data, or whether a number is an error. That is your call.
+  </div>
+
+  <div class="panel">
+    <h2>The center truth</h2>
+    <p class="note">Mean, median and mode. Numbers separated by commas, 1 to 30 of them.</p>
+    <label for="c-l">Numbers</label><input id="c-l" type="text" value="3, 5, 3, 9, 1">
+    <div class="out" id="c-out"></div>
+  </div>
+
+  <div class="panel">
+    <h2>The spread truth</h2>
+    <p class="note">The range, and how far the numbers sit from the mean on average.</p>
+    <label for="s-l">Numbers</label><input id="s-l" type="text" value="3, 5, 3, 9, 1">
+    <div class="out" id="s-out"></div>
+  </div>
+
+  <div class="panel">
+    <h2>The extra-number truth</h2>
+    <p class="note">What one more number does to the mean and the median.</p>
+    <label for="e-l">Numbers</label><input id="e-l" type="text" value="3, 5, 3, 9, 1">
+    <label for="e-x">One more number</label><input id="e-x" type="number" step="any" value="100">
+    <div class="out" id="e-out"></div>
+  </div>
+
+  <footer>Median Math is exact arithmetic over the numbers you enter. <a href="index.html">Why it exists</a>.</footer>
+</main>
+<script src="engine.js"></script>
+<script>
+  const num = (id) => Number(document.getElementById(id).value);
+  const list = (id) => document.getElementById(id).value.split(/[\s,]+/).filter((t) => t !== "").map(Number);
+  function show(id, fn) {
+    const out = document.getElementById(id);
+    try { out.textContent = fn(); out.classList.remove("err"); }
+    catch (e) { out.textContent = e.message; out.classList.add("err"); }
+  }
+  function recalc() {
+    show("c-out", () => centerTruth(list("c-l")));
+    show("s-out", () => spreadTruth(list("s-l")));
+    show("e-out", () => extraTruth(list("e-l"), num("e-x")));
+  }
+  document.querySelectorAll("input, select").forEach((el) => {
+    el.addEventListener("input", recalc);
+    el.addEventListener("change", recalc);
+  });
+  recalc();
+</script>
+</body>
+</html>
