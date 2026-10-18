@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Median Math - mean and median arithmetic</title>
+<style>
+  :root { --accent:#4b4aa0; --ink:#14142b; --paper:#f3f3fa; --soft:#e2e2f4; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#5f5f8c; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Median Math</h1>
+  <p class="lede">One huge number drags the mean. The median barely moves.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    Median Math works out mean, median, mode, range and average distance from the mean for the numbers you type. It does not say which summary suits your data, or whether a number is an error. That is your call.
+  </div>
+  <section>
+    <h2>The center truth</h2>
+    <p>For 3, 5, 3, 9, 1: mean 4.2, median 3, mode 3 (2 times).</p>
+  </section>
+  <section>
+    <h2>The spread truth</h2>
+    <p>Range 8 (from 1 to 9). On average the numbers sit 2.24 from the mean.</p>
+  </section>
+  <section>
+    <h2>The extra-number truth</h2>
+    <p>Adding 100 moves the mean from 4.2 to 20.17 and moves the median from 3 to 4.</p>
+  </section>
+  <a class="btn" href="app.html">Run your numbers</a>
+  <footer>Median Math is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
